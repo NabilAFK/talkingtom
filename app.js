@@ -12,14 +12,11 @@ window.onload = function(){
     recorder = new p5.SoundRecorder();
     recorder.setInput(mic);
     soundFile = new p5.SoundFile();
-    
+    setInterval(recurrr,100);
   });
 }
-function setup() {
-  frameRate(10);
-}
-function draw() {
-  if (!soundFile.isPlaying() && !recording) {
+function recurrr(){
+   if (!soundFile.isPlaying() && !recording) {
     document.querySelector(".mouth").style.animation = "";
     document.querySelector(".stat").innerHTML = "Say something...";
   }
