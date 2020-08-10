@@ -3,8 +3,7 @@ let mic,
   soundFile,
   recording = false,
   sensitivity = 0.5;
-function setup() {
-  frameRate(0);
+window.onload = function(){
   swal(
     "To use Talking Tom Web, you need to allow microphone to record your voice."
   ).then((e) => {
@@ -13,8 +12,11 @@ function setup() {
     recorder = new p5.SoundRecorder();
     recorder.setInput(mic);
     soundFile = new p5.SoundFile();
-    frameRate(10);
+    
   });
+}
+function setup() {
+  frameRate(10);
 }
 function draw() {
   if (!soundFile.isPlaying() && !recording) {
