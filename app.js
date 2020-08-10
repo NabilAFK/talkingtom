@@ -31,7 +31,6 @@ function recurrr(){
     if (!soundFile.isPlaying() && recording) {
       recorder.stop();
       setTimeout(() => {
-        soundFile.amp(1);
         soundFile.rate(1.4);
         soundFile.play();
         document.querySelector(".mouth").style.animation =
