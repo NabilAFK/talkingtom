@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Talking Tom KO</title>
+    <link rel="stylesheet" href="design.css" />
+  </head>
+  <body>
+    <h2>Talking Tom Web</h2>
+    <div class="container">
+      <img src="./ear.png" class="ear1" />
+      <img src="./ear.png" class="ear2" />
+      <img src="./nose.png" class="nose" />
+      <div class="eye1">
+        <div class="pupil"></div>
+      </div>
+      <div class="eye2">
+        <div class="pupil"></div>
+      </div>
+      <div class="mouth"></div>
+      <div class="stat">Say something...</div>
+    </div>
+    <div class="sensitivity-holder">
+      Sensitivity
+      <input
+        type="range"
+        class="sensitivity"
+        min="0"
+        max="5"
+        step="0.1"
+        value="0.5"
+      />
+    </div>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://github.com/processing/p5.js/releases/download/1.1.9/p5.min.js"></script>
+    <script src="https://github.com/processing/p5.js/releases/download/1.1.9/p5.sound.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
